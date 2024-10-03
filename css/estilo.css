@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fontes/Minecrafter.Alt.ttf') format('truetype');
+    /* Adicione outros formatos se necessário */
+}
+
+
+
+
+
+
+
+.navbarkk{
+    background-image: url(../img/navbar.PNG);
+    
+}
+
+.navbartext{
+    color: blueviolet;
+}
+
+
+
+body {
+    font-family: 'Minecraft', sans-serif;
+}
+
+.textosec{
+    color: blueviolet;
+        text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black; /* Cor do contorno */
+    }
+    
