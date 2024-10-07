@@ -34,3 +34,12 @@ body {
             1px 1px 0 black; /* Cor do contorno */
     }
     
+.titulocar{
+    color: #198754;
+    text-shadow: 
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 0 black; /* Cor do contorno */
+}
+
