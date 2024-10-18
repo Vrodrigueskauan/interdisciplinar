@@ -5,11 +5,14 @@
 
 .navbarkk {
     background-image: url(../img/navbar.PNG);
+    height: 8%;
+    padding-bottom: 5%;
 }
 
 .navbartext {
     color: blueviolet;
     transition: color 0.5s ease;
+   
 }
 
 .navbartext:hover {
@@ -29,6 +32,8 @@
 body {
     font-family: 'Minecraft', sans-serif;
     background-color: #f9f6ee;
+    margin: 0;
+    padding: 0;
 }
 
 .textosec {
@@ -130,6 +135,8 @@ body {
     padding: 5%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-height: 100vh;
 }
 
 .text-content {
@@ -382,11 +389,13 @@ h1 {
 
     /* Ajuste de tamanho da legenda do carrossel em telas menores */
     .carousel-caption .titulocar {
-        font-size: 1rem; /* Ajuste de tamanho do título em telas menores */
+        font-size: 0.3rem; /* Ajuste de tamanho do título em telas menores */
+        margin: 5%;
     }
 
     .carousel-caption .textosec {
-        font-size: 0.8rem; /* Ajuste de tamanho do texto secundário em telas menores */
+        font-size: 0.1rem; /* Ajuste de tamanho do texto secundário em telas menores */
+        margin: 5%;
     }
 
     /* Garantir que a legenda não suma */
@@ -427,3 +436,88 @@ h1 {
 .navbartext3:hover{
     background-color: blueviolet;
 }
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
+}
+
+
+
+
+footer {
+    background-color: #aa99ac;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #f9f6ee;
+    position: static;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+h3{
+    
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #198754;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da parte inferior do rodapé */
+.footer-bottom {
+    background-color: #E3F2F9;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.language-select a {
+    text-decoration: none;
+    color: #007BBA;
+}
+
+.privacy-links {
+    display: flex;
+    gap: 20px;
+}
+
+.privacy-links a {
+    text-decoration: none;
+    color: #007BBA;
+}
+
+.privacy-links a:hover {
+    text-decoration: underline;
+}
+
