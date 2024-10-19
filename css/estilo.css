@@ -5,13 +5,18 @@
 
 .navbarkk {
     background-image: url(../img/navbar.PNG);
-    height: 8%;
-    padding-bottom: 5%;
+    height: 4em;
+    align-items: center;
+   
 }
 
 .navbartext {
     color: blueviolet;
     transition: color 0.5s ease;
+    font-size: 1.2rem;
+    margin-left: 5em;
+    
+   
    
 }
 
@@ -34,6 +39,7 @@ body {
     background-color: #f9f6ee;
     margin: 0;
     padding: 0;
+    font-size: 12px;
 }
 
 .textosec {
@@ -406,7 +412,7 @@ h1 {
 
 .transparent-button {
     display: inline-block; /* Faz o botão se comportar como um bloco */
-    padding: 5px 20px; /* Espaçamento interno */
+    padding: 3px 20px; /* Espaçamento interno */
     border: 2px solid #198754; /* Borda do botão */
     border-radius: 5px; /* Bordas arredondadas */
     color: #198754; /* Cor do texto */
@@ -419,6 +425,8 @@ h1 {
     text-align: center;
     margin-right: 3%;
     margin-left: 3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .transparent-button:hover {
@@ -494,30 +502,74 @@ ul li a:hover {
 
 /* Estilo da parte inferior do rodapé */
 .footer-bottom {
-    background-color: #E3F2F9;
+    background-color: #aaaaaa;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #aaaaaa;
 }
 
-.language-select a {
-    text-decoration: none;
-    color: #007BBA;
-}
-
-.privacy-links {
+.sci{
+    position: relative;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
-
-.privacy-links a {
+.sci li{
+    list-style: none;
+}
+.sci li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    color: #333;
+    font-size: 4em;
     text-decoration: none;
-    color: #007BBA;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: background 0.25s;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+}
+.sci li a:hover{
+    background: var(--clr);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
+    border: 5px solid var(--clr);
+}
+.sci li a i{
+    transition: 0.5s;
+    pointer-events: none;
+}
+.sci li a:hover i{
+    transform: scale(1.5) translateZ(50px);
+    color: #fff;
 }
 
-.privacy-links a:hover {
-    text-decoration: underline;
+.fa-brands{
+    flex-wrap: wrap;
 }
 
+
+#backToTopBtn {
+    position: fixed; /* Mantém o botão fixo na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da lateral direita */
+    z-index: 99; /* Garante que o botão ficará à frente de outros elementos */
+    border: none;
+    outline: none;
+    background-color: #555; /* Cor do botão */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Forma arredondada */
+    font-size: 18px;
+    display: none; /* Inicialmente escondido */
+    transition: background-color 0.3s;
+}
+
+#backToTopBtn:hover {
+    background-color: #333; /* Cor ao passar o mouse */
+}

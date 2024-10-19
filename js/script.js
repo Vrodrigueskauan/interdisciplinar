@@ -30,3 +30,84 @@ window.addEventListener('load', checkVisibility);
 //---------------------------------------------------------
 
 
+VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+    max: 30,
+    speed: 400,
+    glare: true
+});
+
+
+let list = document.querySelectorAll('.sci li');
+let bg = document.querySelector('body');
+
+list.forEach(element => {
+    element.addEventListener('mouseenter', function(event){
+        let color = event.target.style.getPropertyValue('--clr');
+        bg.style.backgroundColor = color;
+    })
+    element.addEventListener('mouseleave', function(event){
+        bg.style.backgroundColor = '#fff';
+    })
+})
+
+//---------------------------------------------------------------------------------
+
+const selectElement = document.getElementById("servico");
+
+const words = ["Manutencao de Infraestrutura", "Manutencao de Software", "Consultoria"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150; // Velocidade de digitação
+let pauseDuration = 2000; // Pausa entre as palavras
+let isPaused = false; // Controle para saber se a animação está pausada
+let typingInterval;
+
+function typeWordInDropdown() {
+    if (selectElement.value === "default" && !isPaused) {
+        const currentWord = words[wordIndex];
+
+        // Apagar ou escrever a palavra letra por letra no dropdown
+        if (isDeleting) {
+            selectElement.options[0].text = currentWord.substring(0, charIndex--);
+        } else {
+            selectElement.options[0].text = currentWord.substring(0, charIndex++);
+        }
+
+        // Quando terminar de digitar a palavra, pausa antes de apagar
+        if (!isDeleting && charIndex === currentWord.length) {
+            isPaused = true;
+            setTimeout(() => {
+                isPaused = false;
+                isDeleting = true;
+            }, pauseDuration);
+        }
+
+        // Quando terminar de apagar, passa para a próxima palavra
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+}
+
+// Monitora a mudança de seleção
+selectElement.addEventListener('change', function() {
+    if (selectElement.value !== "default") {
+        clearInterval(typingInterval); // Para a animação se outra opção for selecionada
+    } else {
+        startTyping(); // Retoma a animação se "Escolha um serviço" for selecionado
+    }
+});
+
+// Função para iniciar a animação
+function startTyping() {
+    typingInterval = setInterval(typeWordInDropdown, isDeleting ? typingSpeed / 2 : typingSpeed);
+}
+
+// Inicia a animação de alternância ao carregar a página
+startTyping();
+
+
+//-----------------------------------------------------------------
+

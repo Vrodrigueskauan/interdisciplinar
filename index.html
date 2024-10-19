@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="css\bootstrap-utilities.css"> -->
     <link rel="stylesheet" href="css\estilo.css">
     <title>Byte Amigo</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body class="fonte">
-    <nav class="navbar bg-body-tertiary navbarkk">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbarkk">
         <div class="container-fluid">
-          <a class="navbar-brand navbartext ">Byte Amigo</a>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 navbartext" type="search" placeholder="Pesquisar" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-            <a href="login.html" class="transparent-button">Login</a>
-
-            
-            
-          </form>
+            <a class="navbar-brand navbartext">Byte Amigo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex me-auto" role="search">
+                    <input class="form-control me-2 navbartext" type="search" placeholder="Pesquisar" style="margin-left: 30em; height: 3%; margin-top: 2.2%; opacity: 0;" !important aria-label="Search">
+                    <button style="opacity: 0; "!important class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+                <a href="login.html" class="btn btn-link transparent-button">Login</a>
+            </div>
         </div>
-      </nav>
+    </nav>
+
 
       <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
@@ -74,7 +77,7 @@
     </div>
 
 
-    <section class="services-section slide-up">
+    <section id="servicos" class="services-section slide-up">
         <h1 class="title1 slide-up">SERVICOS</h1>
         <p class="subtitle slide-up">Aqui vai os servicos que podemos oferecer.</p>
 
@@ -101,21 +104,23 @@
     </section>
 
 
-    <section class="content slide-up2">
-        <div class="text-content slide-up2">
-            <h1 class="slide-up2">Sobre nos</h1>
-            <p>A Byte Amigo e uma empresa de assistencia tecnica inovadora, fundada em Sao Paulo por quatro visionarios: Kauan Venancio, Daniel Benatti, Joao Pedro Morangoni, Bryan Almeida e Bruno Sorrisos. Desde a sua criacao, a Byte Amigo tem se dedicado a proporcionar solucoes tecnologicas de excelencia, visando atender as crescentes demandas do mercado.</p>
+    <section id="sobre" class="content">
+        <div class="text-content slide-left">
+            <h1>Sobre nos</h1>
+            <p>A Byte Amigo e uma empresa de assistencia tecnica inovadora, fundada em Sao Paulo por cinco visionarios: Kauan Venancio, Daniel Benatti, Joao Pedro Morangoni, Bryan Almeida e Bruno Sorrisos. Desde a sua criacao, a Byte Amigo tem se dedicado a proporcionar solucoes tecnologicas de excelencia, visando atender as crescentes demandas do mercado.</p>
             <p>Com um portifolio abrangente, a empresa oferece servicos de manutencao de computadores, suporte em infraestrutura de TI e consultoria personalizada, sempre com um olhar atento a qualidade e a eficiencia. Nossa equipe e composta por profissionais altamente capacitados, prontos para enfrentar os desafios tecnologicos que surgem no dia a dia.</p>
             <p>A Byte Amigo acredita na importancia de estabelecer parcerias duradouras com seus clientes, fundamentadas na confianca e na transparencia. Nosso compromisso e nao apenas resolver problemas, mas tambem prevenir futuros contratempos, garantindo que seus sistemas funcionem de maneira otimizada.</p>
             <p>Estamos sempre em busca de inovacao e atualizacao, para que nossos clientes possam contar com as melhores praticas e tecnologias disponiveis. Na Byte Amigo, a sua satisfacao e a nossa prioridade, e estamos prontos para ser o seu aliado no mundo da tecnologia.</p>
         </div>
-        <div class="image-content slide-up2">
-            <img class="image-content slide-up2" src="./img/LOGO/eba.png" alt="Equipamentos Cirúrgicos">
+        <div class="image-content slide-left">
+            <img class="image-content slide-left" src="./img/LOGO/eba.png" alt="Equipamentos Cirúrgicos">
         </div>
     </section>
+    
 
 
-    <h1 class="title1">Nossa Equipe</h1>
+   <section id="time">
+    <h1 class="title1" id="time">Nossa Equipe</h1>
     <div class="team">
         <div class="member">
             <img src="./img/servicos/Kauan.jpg" alt="Kauan Venancio">
@@ -139,53 +144,42 @@
         </div>
     </div>
 
-    
+</section>
     
     <footer>
+     
         <div class="footer-section">
-            <h3>Ferramenta</h3>
+            <h3 class="fttxt">Nossa Empresa</h3>
             <ul>
-                <li><a href="#">Enterprise Service Management (ESM/CSC)</a></li>
-                <li><a href="#">Gestão de Serviços de TI (ITSM)</a></li>
-                <li><a href="#">Gestão de Facilities</a></li>
-                <li><a href="#">Recursos</a></li>
-                <li><a href="#">Especificações da Ferramenta</a></li>
-                <li><a href="#">Preços</a></li>
+                <li><a href="#sobre">Sobre a Byte Amigo</a></li>
+                <li><a href="#servicos">servicos</a></li>
+                <li><a href="#time">nosso time</a></li>
+                <p class="">Desenvolvido por: Kauan Venancio e Joao Pedro Morangoni</p>
+               
             </ul>
         </div>
-        <div class="footer-section">
-            <h3>Conteúdos</h3>
-            <ul>
-                <li><a href="#">Cases de Sucesso</a></li>
-                <li><a href="#">E-books</a></li>
-                <li><a href="#">Webinars</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Glossário</h3>
-            <ul>
-                <li><a href="#">O que é ITSM?</a></li>
-                <li><a href="#">O que é Gestão de conhecimento (KCS)?</a></li>
-                <li><a href="#">O que é ITIL?</a></li>
-                <li><a href="#">O que é Shift Left?</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Nossa Empresa</h3>
-            <ul>
-                <li><a href="#">Sobre a TOPdesk</a></li>
-                <li><a href="#">Carreiras</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Divulgação responsável</a></li>
-                <li><a href="#">Acessibilidade</a></li>
-                <li><a href="#">Recursos da marca</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </div>
-    </footer>
-    
+        <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Andev Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <ul class="sci">
+    <li style="--clr: #ff0000;"><a href="https://www.youtube.com/channel/UCdpxn_sKGCna4Ly6vKSiykw"><i class="fa-brands fa-youtube"></i></a></li>
+    <li style="--clr: #333333;"><a href="https://x.com/ye_world_"><i class="fa-brands fa-x-twitter"></i></a></li>
+    <li style="--clr: #00a783; flex-wrap: wrap;"><a href="https://api.whatsapp.com/send?phone=5511911241051&Olá, quero Saber mais sobre a Byte Amigo!"><i class="fa-brands fa-whatsapp"></i></a></li>
+  </ul>
 
+
+    </footer>
+
+   
+    
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/script.js"></script>   
 
