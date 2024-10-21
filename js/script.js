@@ -111,3 +111,35 @@ startTyping();
 
 //-----------------------------------------------------------------
 
+function generateKey() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let key = '';
+    for (let i = 0; i < 12; i++) {
+        key += chars.charAt(Math.floor(Math.random() * chars.length));
+        if ((i + 1) % 3 === 0 && i < 11) {
+            key += '-';
+        }
+    }
+    return key;
+}
+
+const errorKeyElement = document.getElementById('error-key');
+const generatedKey = generateKey();
+errorKeyElement.textContent = generatedKey;
+
+document.getElementById('copy-btn').addEventListener('click', () => {
+    navigator.clipboard.writeText(generatedKey).then(() => {
+        const notification = document.getElementById('notification');
+        notification.classList.add('show');
+
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 10000);
+    });
+});
+
+document.getElementById('close-btn').addEventListener('click', () => {
+    const notification = document.getElementById('notification');
+    notification.classList.remove('show');
+});
+            

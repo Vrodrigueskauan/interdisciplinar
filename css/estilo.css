@@ -6,8 +6,8 @@
 .navbarkk {
     background-image: url(../img/navbar.PNG);
     height: 4em;
+    display: flex; /* Adicionado para facilitar o alinhamento */
     align-items: center;
-   
 }
 
 .navbartext {
@@ -15,9 +15,6 @@
     transition: color 0.5s ease;
     font-size: 1.2rem;
     margin-left: 5em;
-    
-   
-   
 }
 
 .navbartext:hover {
@@ -94,6 +91,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap; /* Permite que os itens quebrem em linhas em telas menores */
 }
 
 .service-item {
@@ -124,7 +122,6 @@ body {
     color: #666;
 }
 
-/* Animation for fade-in effect */
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
@@ -134,6 +131,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 .content {
     display: flex;
     justify-content: space-between;
@@ -143,6 +141,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     min-height: 100vh;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre em linhas */
 }
 
 .text-content {
@@ -178,6 +177,7 @@ body {
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem em linhas */
 }
 
 .left-section {
@@ -393,7 +393,6 @@ h1 {
         font-size: 0.8rem;
     }
 
-    /* Ajuste de tamanho da legenda do carrossel em telas menores */
     .carousel-caption .titulocar {
         font-size: 0.3rem; /* Ajuste de tamanho do título em telas menores */
         margin: 5%;
@@ -404,7 +403,6 @@ h1 {
         margin: 5%;
     }
 
-    /* Garantir que a legenda não suma */
     .carousel-caption {
         display: block !important; /* Mantém a legenda visível */
     }
@@ -434,17 +432,16 @@ h1 {
     color: white; /* Cor do texto ao passar o mouse */
 }
 
-.navbartext3{
+.navbartext3 {
     background-color: #198754;
     text-decoration: none;
     transition: color 1s ease;
     color: #fff;
 }
 
-.navbartext3:hover{
+.navbartext3:hover {
     background-color: blueviolet;
 }
-
 
 .navbar {
     position: fixed;
@@ -457,15 +454,12 @@ h1 {
     z-index: 1000; /* Garante que a navbar fique acima do conteúdo */
 }
 
-
-
-
 footer {
     background-color: #aa99ac;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que o rodapé quebre em linhas */
     border-top: 1px solid #f9f6ee;
     position: static;
 }
@@ -476,8 +470,7 @@ footer {
     min-width: 200px;
 }
 
-h3{
-    
+h3 {
     font-size: 16px;
     margin-bottom: 10px;
 }
@@ -500,7 +493,6 @@ ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo da parte inferior do rodapé */
 .footer-bottom {
     background-color: #aaaaaa;
     padding: 20px 40px;
@@ -510,15 +502,18 @@ ul li a:hover {
     border-top: 1px solid #aaaaaa;
 }
 
-.sci{
+.sci {
     position: relative;
     display: flex;
     gap: 40px;
+    flex-wrap: wrap; /* Permite que os itens quebrem em linhas */
 }
-.sci li{
+
+.sci li {
     list-style: none;
 }
-.sci li a{
+
+.sci li a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -534,24 +529,26 @@ ul li a:hover {
     transition: background 0.25s;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
 }
-.sci li a:hover{
+
+.sci li a:hover {
     background: var(--clr);
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.25);
     border: 5px solid var(--clr);
 }
-.sci li a i{
+
+.sci li a i {
     transition: 0.5s;
     pointer-events: none;
 }
-.sci li a:hover i{
+
+.sci li a:hover i {
     transform: scale(1.5) translateZ(50px);
     color: #fff;
 }
 
-.fa-brands{
+.fa-brands {
     flex-wrap: wrap;
 }
-
 
 #backToTopBtn {
     position: fixed; /* Mantém o botão fixo na tela */
