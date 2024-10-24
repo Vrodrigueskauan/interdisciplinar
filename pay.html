@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>byte amigo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/pay.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicione Forma de pagamento</h1>
+        <div class="decoration"></div>
+        <div class="input_container">
+            <label class="input_label" for="card-number-input">numero do cartao</label>
+            <input type="text" id="card-number-input" class="input_field" placeholder="coloque o numero do cartao " maxlength="19">
+            <img id="card-icon" class="card-icon" src="" alt="Card Type Icon">
+            <div id="card-number-error" class="input_error hidden">valor invalido</div>
+        </div>
+        <div class="input_container">
+            <label class="input_label" for="expiry-date-input">validade (MM/aa)</label>
+            <input type="text" id="expiry-date-input" class="input_field" placeholder="mm/aa" maxlength="5">
+            <div id="expiry-date-error" class="input_error hidden">valor invalido</div>
+        </div>
+        <div class="input_container">
+            <label class="input_label" for="cardholder-name-input">nome do titular</label>
+            <input type="text" id="cardholder-name-input" class="input_field" placeholder="seu nome completo">
+            <div id="cardholder-name-error" class="input_error hidden">nome nao pode ter numeros</div>
+        </div>
+        <div class="input_container">
+            <label class="input_label" for="cvv-input">codigo de seguranca (CVV)</label>
+            <input type="text" id="cvv-input" class="input_field" placeholder="CVV" maxlength="3">
+            <div id="cvv-error" class="input_error hidden">cvv invalido</div>
+        </div>
+        <button class="button" id="card-button">
+            <span>pagar com cartao</span>
+        </button>
+        <button class="button" id="paypal-button">
+            <span>pagar com pix</span>
+        </button>
+        <div class="footer">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
+
+ 
+            

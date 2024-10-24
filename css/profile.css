@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fontes/Minecrafter.Alt.ttf') format('truetype');
+}
+
+
+body {
+    font-family: 'minecraft', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-container {
+    text-align: center;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 15px 0 5px;
+    font-size: 24px;
+    color: blueviolet;
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+}
+
+h2 {
+    margin: 0;
+    font-size: 16px;
+    color: rgb(55, 40, 70);
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+}
+
+p {
+    margin: 15px 0;
+    color: rgb(55, 40, 70);
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+}
+
+.edit-btn {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    font-family: 'minecraft', sans-serif;
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+}
+
+.edit-btn:hover {
+    background-color: blueviolet;
+   
+}

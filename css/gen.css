@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fontes/Minecrafter.Alt.ttf') format('truetype');
+}
+
+
+
+img {
+    --s: min(50vw, 360px); /* control the size */
+    
+    width: var(--s);
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    padding: calc(var(--s)/4) calc(var(--s)/8) 0;
+    box-sizing: border-box;
+    background: conic-gradient(from 135deg at 50% 15%, rgb(73, 23, 119), blueviolet 25%, #0000 0);
+    clip-path: polygon(-50% 0, 150% 0, 50% 100%);
+    transition: .5s;
+    cursor: pointer;
+    
+    
+  }
+  
+  img:hover {
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'minecraft';
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2e38;
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre as imagens */
+  }
+  
+  .gender-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 360px; /* Limita a largura do contêiner */
+    margin-top: 10px; /* Margem entre as imagens e os textos */
+    font-size: 18px;
+    color: blueviolet;
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+  }
+
+  h1{
+    color: #198754;
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; /* Contorno em preto */
+  }
+  

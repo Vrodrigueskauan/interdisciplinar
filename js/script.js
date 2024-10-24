@@ -142,4 +142,91 @@ document.getElementById('close-btn').addEventListener('click', () => {
     const notification = document.getElementById('notification');
     notification.classList.remove('show');
 });
-            
+
+//---------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    const cardNumberInput = document.getElementById('card-number-input');
+    const expiryDateInput = document.getElementById('expiry-date-input');
+    const cvvInput = document.getElementById('cvv-input');
+    const cardholderNameInput = document.getElementById('cardholder-name-input');
+    const cardIcon = document.getElementById('card-icon');
+
+    cardNumberInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '').substring(0, 16);
+        e.target.value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+
+        // Determine card type
+        const cardType = getCardType(value);
+        if (cardType) {
+            cardIcon.src = cardType.icon;
+            cardIcon.style.display = 'block'; // Show the icon
+        } else {
+            cardIcon.style.display = 'none'; // Hide the icon
+            document.getElementById('card-number-error').classList.remove('hidden'); // Show error
+        }
+    });
+
+    expiryDateInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '').substring(0, 4);
+        e.target.value = value.length >= 2 ? value.substring(0, 2) + '/' + value.substring(2, 4) : value;
+
+        if (!/^(0[1-9]|1[0-2])\/?([0-9]{2})$/.test(e.target.value)) {
+            document.getElementById('expiry-date-error').classList.remove('hidden'); // Show error
+        } else {
+            document.getElementById('expiry-date-error').classList.add('hidden'); // Hide error
+        }
+    });
+
+    cvvInput.addEventListener('input', function(e) {
+        e.target.value = e.target.value.replace(/\D/g, '').substring(0, 3);
+        if (e.target.value.length < 3) {
+            document.getElementById('cvv-error').classList.remove('hidden'); // Show error
+        } else {
+            document.getElementById('cvv-error').classList.add('hidden'); // Hide error
+        }
+    });
+
+    cardholderNameInput.addEventListener('input', function(e) {
+        e.target.value = e.target.value.replace(/[0-9]/g, '');
+        if (/\d/.test(e.target.value)) {
+            document.getElementById('cardholder-name-error').classList.remove('hidden'); // Show error
+        } else {
+            document.getElementById('cardholder-name-error').classList.add('hidden'); // Hide error
+        }
+    });
+
+    function getCardType(number) {
+        const cardTypes = [
+            { name: 'Visa', regex: /^4[0-9]{12}(?:[0-9]{3})?/, icon: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Inc._logo.svg' },
+            { name: 'MasterCard', regex: /^5[1-5][0-9]{14}/, icon: 'https://upload.wikimedia.org/wikipedia/commons/0/4d/MasterCard-logo.svg' },
+            { name: 'American Express', regex: /^3[47][0-9]{13}/, icon: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/American_Express_logo.svg' },
+            { name: 'Discover', regex: /^6(?:011|5[0-9]{2})[0-9]{12}/, icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5e/Discover_Logo.svg' }
+        ];
+        return cardTypes.find(type => type.regex.test(number)) || null;
+    }
+
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        document.body.appendChild(notification);
+        setTimeout(() => { notification.style.right = '20px'; }, 100);
+        setTimeout(() => {
+            notification.style.right = '-300px';
+            setTimeout(() => notification.remove(), 500);
+        }, 3000);
+    }
+
+    document.getElementById('card-button').addEventListener('click', () => {
+        if (document.getElementById('card-number-error').classList.contains('hidden') &&
+            document.getElementById('expiry-date-error').classList.contains('hidden') &&
+            document.getElementById('cvv-error').classList.contains('hidden') &&
+            document.getElementById('cardholder-name-error').classList.contains('hidden')) {
+            showNotification('Payment with Card processed!');
+        }
+    });
+
+    document.getElementById('paypal-button').addEventListener('click', () => showNotification('Payment with PayPal processed!'));
+});
+ 
+ 

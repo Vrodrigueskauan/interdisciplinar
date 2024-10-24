@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fontes/Minecrafter.Alt.ttf') format('truetype');
+}
+
+body {
+    font-family: 'minecraft', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #198754;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgb(52, 17, 85), blueviolet);
+    animation: gradientAnimation 10s ease infinite;
+}
+
+  
+  .card {
+    background: #2b2e38;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .qr-code {
+    width: 200px; /* Ajuste conforme necessário */
+    height: 200px; /* Ajuste conforme necessário */
+  }
+  
+  p {
+    margin: 15px 0;
+  }
+  
+  #pix-link {
+    color: blueviolet; /* Cor do link */
+    text-decoration: none;
+    transition: color 0.5s ease;
+  }
+  
+  #pix-link:hover {
+    color: #198754; /* Efeito ao passar o mouse */
+  }
+  
+  button {
+    background-color: #28a745; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 1s ease;
+    font-family: 'minecraft', sans-serif;
+}
+  
+  
+  button:hover {
+    background-color: blueviolet; /* Efeito ao passar o mouse */
+    
+  }
+
+  #finalizar{
+    transition: color 1s ease;
+  }
+  
