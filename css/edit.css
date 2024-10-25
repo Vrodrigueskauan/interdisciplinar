@@ -1,0 +1,189 @@
+/* Configuração geral da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container principal para o conteúdo do perfil */
+.profile-container {
+    background-color: #1a1a1a; /* Fundo cinza escuro */
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    text-align: center;
+    border: 2px solid #4a0072; /* Borda roxa */
+}
+
+/* Estilo para o título e subtítulos */
+h1, h2 {
+    color: #9c27b0; /* Roxo para títulos */
+}
+
+/* Texto do parágrafo */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc; /* Texto um pouco mais claro */
+}
+
+/* Foto de perfil */
+.profile-pic img, 
+.profile-edit-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #9c27b0; /* Borda roxa */
+    transition: transform 0.3s ease;
+}
+
+/* Animação suave ao passar o mouse sobre a imagem de perfil */
+.profile-pic img:hover, 
+.profile-edit-img:hover {
+    transform: scale(1.05); /* Aumenta um pouco no hover */
+}
+
+/* Ícones de edição (lápis) */
+.edit-icon {
+    position: absolute;
+    color: #00e676; /* Verde neon */
+    cursor: pointer;
+    font-size: 1.5rem;
+    right: 15px;
+    top: 10px;
+    background-color: #4a0072; /* Fundo roxo */
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* Animação do ícone de edição ao passar o mouse */
+.edit-icon:hover {
+    background-color: #00e676; /* Fica verde neon ao passar o mouse */
+    color: #1a1a1a; /* Ícone fica escuro */
+}
+
+/* Campos de entrada de texto e textarea */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #333; /* Fundo cinza escuro */
+    border: none;
+    border-radius: 8px;
+    color: #fff; /* Texto branco */
+    font-size: 1rem;
+}
+
+/* Foco no campo de entrada */
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    background-color: #4a0072; /* Foco com roxo */
+}
+
+/* Botão de salvar */
+.save-btn, .cancel-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Botão de salvar - verde */
+.save-btn {
+    background-color: #00e676; /* Verde neon */
+    color: #1a1a1a; /* Texto preto */
+}
+
+.save-btn:hover {
+    background-color: #66ffa6; /* Verde claro ao passar o mouse */
+}
+
+/* Botão de cancelar - roxo */
+.cancel-btn {
+    background-color: #9c27b0; /* Roxo */
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #ab47bc; /* Roxo claro ao passar o mouse */
+}
+
+/* Estilo para o formulário */
+form {
+    text-align: left;
+}
+
+/* Para o preview da imagem de perfil na edição */
+.edit-img {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-edit-img {
+    border: 3px solid #9c27b0; /* Borda roxa para a imagem */
+}
+
+.profile-edit-img:hover {
+    transform: scale(1.1); /* Aumenta um pouco no hover */
+}
+
+/* Estilo para a imagem de perfil na página de edição */
+.profile-image-container {
+    position: relative;
+    width: fit-content;
+}
+
+#profileImagePreview {
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover #profileImagePreview {
+    opacity: 0.5; /* Torna a imagem semitransparente ao passar o mouse */
+}
+
+/* Ícone de lixeira */
+.trash-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.profile-image-container:hover .trash-icon {
+    display: block;
+}
+
+/* Visualização de imagem em detalhe */
+.enlarged-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 10px #000;
+}

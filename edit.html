@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="./css/edit.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Editar Perfil</h1>
+        <form id="editProfileForm">
+            <!-- Pré-visualização da Imagem com Lixeira -->
+            <div class="profile-image-container">
+                <img id="profileImagePreview" src="./img/foto1.png" class="profile-edit-img" alt="Imagem de perfil">
+                <label for="profileImage" class="edit-icon">✏️</label>
+                <input type="file" id="profileImage" accept="image/*" style="display:none;">
+                
+                <!-- Ícone de lixeira para remover imagem -->
+                <img src="./img/trash-icon.png" class="trash-icon" alt="Remover imagem" onclick="removeImage()">
+            </div>
+
+            <!-- Campos de texto para edição -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" placeholder="Nome Completo" value="Cliente">
+
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" placeholder="Nome de Usuário" value="cliente12345">
+
+            <label for="bio">Biografia:</label>
+            <textarea id="bio" rows="4" placeholder="Escreva algo sobre você">Seja bem-vindo(a) ao nosso site! Aqui você encontra os melhores serviços em tecnologia e suporte técnico.</textarea>
+
+            <!-- Botões de ação -->
+            <button type="submit" class="save-btn">Salvar</button>
+            <button type="button" class="cancel-btn" onclick="cancelEdit()">Cancelar</button>
+        </form>
+    </div>
+    
+    <script src="./js/edit.js"></script>
+</body>
+</html>

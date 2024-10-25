@@ -31,7 +31,7 @@ window.onload = function() {
 
     // Fallback para erro na imagem (caso não consiga carregar)
     profileImage.onerror = function() {
-        profileImage.src = 'default.jpg';  // Imagem padrão se houver erro
+        profileImage.src = './img/foto1.png';  // Imagem padrão se houver erro
     };
 };
 
