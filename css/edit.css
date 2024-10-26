@@ -1,6 +1,13 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fontes/Minecrafter.Alt.ttf') format('truetype');
+}
+
+
+
 /* Configuração geral da página */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'minecraft', sans-serif;
     background-color: #0a0a0a; /* Fundo preto */
     color: #fff; /* Texto branco */
     display: flex;
@@ -23,7 +30,7 @@ body {
 
 /* Estilo para o título e subtítulos */
 h1, h2 {
-    color: #9c27b0; /* Roxo para títulos */
+    color: blueviolet; /* Roxo para títulos */
 }
 
 /* Texto do parágrafo */
@@ -40,7 +47,7 @@ p {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #9c27b0; /* Borda roxa */
+    border: 4px solid blueviolet; /* Borda roxa */
     transition: transform 0.3s ease;
 }
 
@@ -52,8 +59,9 @@ p {
 
 /* Ícones de edição (lápis) */
 .edit-icon {
+    font-family: 'minecraft', sans-serif;
     position: absolute;
-    color: #00e676; /* Verde neon */
+    color: #198754; /* Verde neon */
     cursor: pointer;
     font-size: 1.5rem;
     right: 15px;
@@ -66,7 +74,7 @@ p {
 
 /* Animação do ícone de edição ao passar o mouse */
 .edit-icon:hover {
-    background-color: #00e676; /* Fica verde neon ao passar o mouse */
+    background-color: #198754; /* Fica verde neon ao passar o mouse */
     color: #1a1a1a; /* Ícone fica escuro */
 }
 
@@ -81,12 +89,13 @@ input[type="text"], textarea {
     border-radius: 8px;
     color: #fff; /* Texto branco */
     font-size: 1rem;
+    font-family: 'minecraft', sans-serif;
 }
 
 /* Foco no campo de entrada */
 input[type="text"]:focus, textarea:focus {
     outline: none;
-    background-color: #4a0072; /* Foco com roxo */
+    background-color: #0d0611; /* Foco com roxo */
 }
 
 /* Botão de salvar */
@@ -98,11 +107,12 @@ input[type="text"]:focus, textarea:focus {
     font-size: 1rem;
     margin: 10px 5px;
     transition: background-color 0.3s ease;
+    font-family: 'minecraft', sans-serif;
 }
 
 /* Botão de salvar - verde */
 .save-btn {
-    background-color: #00e676; /* Verde neon */
+    background-color: #198754; /* Verde neon */
     color: #1a1a1a; /* Texto preto */
 }
 
@@ -112,7 +122,7 @@ input[type="text"]:focus, textarea:focus {
 
 /* Botão de cancelar - roxo */
 .cancel-btn {
-    background-color: #9c27b0; /* Roxo */
+    background-color: blueviolet; /* Roxo */
     color: white;
 }
 
@@ -132,11 +142,13 @@ form {
 }
 
 .profile-edit-img {
-    border: 3px solid #9c27b0; /* Borda roxa para a imagem */
+    border: 3px solid blueviolet; /* Borda roxa para a imagem */
+    transition: all 1s;
 }
 
 .profile-edit-img:hover {
     transform: scale(1.1); /* Aumenta um pouco no hover */
+   
 }
 
 /* Estilo para a imagem de perfil na página de edição */
@@ -156,10 +168,11 @@ form {
 /* Ícone de lixeira */
 .trash-icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
-    height: 20px;
+
+    top: 5px;
+    
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     display: none;
 }
@@ -186,4 +199,9 @@ form {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0 0 10px #000;
+}
+
+.imgedit{
+    height: 30px;
+    width: 30px;
 }
